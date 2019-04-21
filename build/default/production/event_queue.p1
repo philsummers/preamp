@@ -1,0 +1,174 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"3 event_queue.c
+[v _queue `uc ~T0 @X0 -> 10 `i e ]
+[; ;event_queue.c: 3: unsigned char queue[10];
+"4
+[v _rear `c ~T0 @X0 1 e ]
+[i _rear
+-> -U -> 1 `i `c
+]
+[; ;event_queue.c: 4: signed char rear = -1;
+"5
+[v _front `c ~T0 @X0 1 e ]
+[i _front
+-> -U -> 1 `i `c
+]
+[; ;event_queue.c: 5: signed char front = -1;
+"7
+[v _events_in_queue `(uc ~T0 @X0 1 ef ]
+{
+[; ;event_queue.c: 7: char events_in_queue(void) {
+[e :U _events_in_queue ]
+[f ]
+[; ;event_queue.c: 8: if (front == -1) {
+"8
+[e $ ! == -> _front `i -U -> 1 `i 2  ]
+{
+[; ;event_queue.c: 9: return 0;
+"9
+[e ) -> -> 0 `i `uc ]
+[e $UE 1  ]
+"10
+}
+[; ;event_queue.c: 10: } else {
+[e $U 3  ]
+[e :U 2 ]
+{
+[; ;event_queue.c: 11: return 1;
+"11
+[e ) -> -> 1 `i `uc ]
+[e $UE 1  ]
+"12
+}
+[e :U 3 ]
+[; ;event_queue.c: 12: }
+[; ;event_queue.c: 13: }
+"13
+[e :UE 1 ]
+}
+"15
+[v _enqueue_event `(uc ~T0 @X0 1 ef1`uc ]
+{
+[; ;event_queue.c: 15: char enqueue_event(char evt) {
+[e :U _enqueue_event ]
+[v _evt `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;event_queue.c: 17: if ((front == 0 && rear == 10-1) || (front == rear+1)) {
+"17
+[e $ ! || && == -> _front `i -> 0 `i == -> _rear `i - -> 10 `i -> 1 `i == -> _front `i + -> _rear `i -> 1 `i 5  ]
+{
+[; ;event_queue.c: 18: return 0;
+"18
+[e ) -> -> 0 `i `uc ]
+[e $UE 4  ]
+"19
+}
+[; ;event_queue.c: 19: } else if (rear == -1) {
+[e $U 6  ]
+[e :U 5 ]
+[e $ ! == -> _rear `i -U -> 1 `i 7  ]
+{
+[; ;event_queue.c: 20: rear++;
+"20
+[e ++ _rear -> -> 1 `i `c ]
+[; ;event_queue.c: 21: front++;
+"21
+[e ++ _front -> -> 1 `i `c ]
+"22
+}
+[; ;event_queue.c: 22: } else if (rear == 10-1 && front > 0) {
+[e $U 8  ]
+[e :U 7 ]
+[e $ ! && == -> _rear `i - -> 10 `i -> 1 `i > -> _front `i -> 0 `i 9  ]
+{
+[; ;event_queue.c: 23: rear = 0;
+"23
+[e = _rear -> -> 0 `i `c ]
+"24
+}
+[; ;event_queue.c: 24: } else {
+[e $U 10  ]
+[e :U 9 ]
+{
+[; ;event_queue.c: 25: rear++;
+"25
+[e ++ _rear -> -> 1 `i `c ]
+"26
+}
+[e :U 10 ]
+[e :U 8 ]
+[e :U 6 ]
+[; ;event_queue.c: 26: }
+[; ;event_queue.c: 28: queue[rear] = evt;
+"28
+[e = *U + &U _queue * -> -> _rear `uc `ux -> -> # *U &U _queue `ui `ux _evt ]
+[; ;event_queue.c: 29: return 1;
+"29
+[e ) -> -> 1 `i `uc ]
+[e $UE 4  ]
+[; ;event_queue.c: 30: }
+"30
+[e :UE 4 ]
+}
+"33
+[v _dequeue_event `(uc ~T0 @X0 1 ef ]
+{
+[; ;event_queue.c: 33: char dequeue_event() {
+[e :U _dequeue_event ]
+[f ]
+"34
+[v _event `uc ~T0 @X0 1 a ]
+[; ;event_queue.c: 34: char event;
+[; ;event_queue.c: 36: if (!events_in_queue()) {
+"36
+[e $ ! ! != -> ( _events_in_queue ..  `i -> -> -> 0 `i `uc `i 12  ]
+{
+[; ;event_queue.c: 37: return -1;
+"37
+[e ) -> -U -> 1 `i `uc ]
+[e $UE 11  ]
+"38
+}
+[; ;event_queue.c: 38: } else if (front == rear) {
+[e $U 13  ]
+[e :U 12 ]
+[e $ ! == -> _front `i -> _rear `i 14  ]
+{
+[; ;event_queue.c: 39: event = queue[front];
+"39
+[e = _event *U + &U _queue * -> -> _front `uc `ux -> -> # *U &U _queue `ui `ux ]
+[; ;event_queue.c: 40: front = -1;
+"40
+[e = _front -> -U -> 1 `i `c ]
+[; ;event_queue.c: 41: rear = -1;
+"41
+[e = _rear -> -U -> 1 `i `c ]
+[; ;event_queue.c: 43: return event;
+"43
+[e ) _event ]
+[e $UE 11  ]
+"44
+}
+[; ;event_queue.c: 44: } else {
+[e $U 15  ]
+[e :U 14 ]
+{
+[; ;event_queue.c: 45: event = queue[front];
+"45
+[e = _event *U + &U _queue * -> -> _front `uc `ux -> -> # *U &U _queue `ui `ux ]
+[; ;event_queue.c: 46: front++;
+"46
+[e ++ _front -> -> 1 `i `c ]
+[; ;event_queue.c: 48: return event;
+"48
+[e ) _event ]
+[e $UE 11  ]
+"49
+}
+[e :U 15 ]
+[e :U 13 ]
+[; ;event_queue.c: 49: }
+[; ;event_queue.c: 50: }
+"50
+[e :UE 11 ]
+}

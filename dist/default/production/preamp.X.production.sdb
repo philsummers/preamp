@@ -1,0 +1,947 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4455 ]
+[d frameptr 4065 ]
+"71 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\newmain.c
+[e E4229 states `uc
+S_STANDBY 0
+S_STANDBY_2 1
+S_POWER_ON 2
+S_POWER_ON_2 3
+S_IDLE 4
+S_MENU_1 5
+S_MENU_2 6
+S_MENU_3 7
+S_MENU_4 8
+S_MENU_5 9
+S_MENU_6 10
+]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\itoa.c
+[v _itoa itoa `(*.39uc  1 e 2 0 ]
+"17
+[v _utoa utoa `(*.39uc  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"7 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\event_queue.c
+[v _events_in_queue events_in_queue `(uc  1 e 1 0 ]
+"6 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\LCD-library.c
+[v _LCD_delay LCD_delay `(v  1 e 1 0 ]
+"7
+[v _LCD_delay_us LCD_delay_us `(v  1 e 1 0 ]
+"8
+[v _LCD_delay_ms LCD_delay_ms `(v  1 e 1 0 ]
+"11
+[v _LCD_wait LCD_wait `(v  1 e 1 0 ]
+"52
+[v _LCD_8bitCodeNoWait LCD_8bitCodeNoWait `(v  1 e 1 0 ]
+"59
+[v _LCD_8bitCode LCD_8bitCode `(v  1 e 1 0 ]
+"64
+[v _LCD_4bitCodeNoWait LCD_4bitCodeNoWait `(v  1 e 1 0 ]
+"72
+[v _LCD_4bitCode LCD_4bitCode `(v  1 e 1 0 ]
+"77
+[v _LCD_code LCD_code `(v  1 e 1 0 ]
+"85
+[v _LCD_init LCD_init `(v  1 e 1 0 ]
+"139
+[v _LCD_displayChar LCD_displayChar `(v  1 e 1 0 ]
+"151
+[v _LCD_displayString LCD_displayString `(v  1 e 1 0 ]
+"201
+[v _LCD_clear LCD_clear `(v  1 e 1 0 ]
+"208
+[v _LCD_off LCD_off `(v  1 e 1 0 ]
+"216
+[v _LCD_on LCD_on `(v  1 e 1 0 ]
+"223
+[v _LCD_setCursor LCD_setCursor `(v  1 e 1 0 ]
+"237
+[v _LCD_home LCD_home `(v  1 e 1 0 ]
+"242
+[v _LCD_cursorOff LCD_cursorOff `(v  1 e 1 0 ]
+"270
+[v _LCD_moveLeft LCD_moveLeft `(v  1 e 1 0 ]
+"277
+[v _LCD_moveRight LCD_moveRight `(v  1 e 1 0 ]
+"298
+[v _backlight_on backlight_on `(v  1 e 1 0 ]
+"302
+[v _backlight_off backlight_off `(v  1 e 1 0 ]
+"306
+[v _LCD_slider LCD_slider `(v  1 e 1 0 ]
+"76 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\newmain.c
+[v _isr isr `II(v  1 e 1 0 ]
+"101
+[v _init_timer init_timer `(v  1 e 1 0 ]
+"123
+[v _Wait Wait `(v  1 e 1 0 ]
+"129
+[v _delay_ms delay_ms `(v  1 e 1 0 ]
+"135
+[v _delay_s delay_s `(v  1 e 1 0 ]
+"183
+[v _init_lcd_chars init_lcd_chars `(v  1 e 1 0 ]
+"261
+[v _main main `(i  1 e 2 0 ]
+"27 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\switches.c
+[v _init_shiftreg init_shiftreg `(v  1 e 1 0 ]
+"48
+[v _init_switches init_switches `(v  1 e 1 0 ]
+"62
+[v _set_standby_led set_standby_led `(v  1 e 1 0 ]
+"66
+[v _clear_standby_led clear_standby_led `(v  1 e 1 0 ]
+"70
+[v _set_mute_led set_mute_led `(v  1 e 1 0 ]
+"74
+[v _clear_mute_led clear_mute_led `(v  1 e 1 0 ]
+"78
+[v _set_view_led set_view_led `(v  1 e 1 0 ]
+"82
+[v _clear_view_led clear_view_led `(v  1 e 1 0 ]
+"86
+[v _set_store_led set_store_led `(v  1 e 1 0 ]
+"90
+[v _clear_store_led clear_store_led `(v  1 e 1 0 ]
+"102
+[v _read_switches read_switches `(uc  1 e 1 0 ]
+"162
+[v _read_switches_synchronous read_switches_synchronous `(uc  1 e 1 0 ]
+"176
+[v _set_switch_led set_switch_led `(v  1 e 1 0 ]
+"181
+[v _clear_switch_led clear_switch_led `(v  1 e 1 0 ]
+"186
+[v _clear_all_switch_leds clear_all_switch_leds `(v  1 e 1 0 ]
+"200
+[v _clear_all_sources clear_all_sources `(v  1 e 1 0 ]
+"204
+[v _set_led_and_source set_led_and_source `(v  1 e 1 0 ]
+"211
+[v _update_switches_and_relays update_switches_and_relays `(v  1 e 1 0 ]
+"29 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\volume.c
+[v _init_volume init_volume `(v  1 e 1 0 ]
+"60
+[v _set_volume set_volume `(v  1 e 1 0 ]
+"107
+[v _toggle_mute toggle_mute `(v  1 e 1 0 ]
+"159
+[v _volumeDB volumeDB `(v  1 e 1 0 ]
+[s S665 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 SUSPND 1 0 :1:1 
+`uc 1 RESUME 1 0 :1:2 
+`uc 1 USBEN 1 0 :1:3 
+`uc 1 PKTDIS 1 0 :1:4 
+`uc 1 SE0 1 0 :1:5 
+`uc 1 PPBRST 1 0 :1:6 
+]
+"662 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4455.h
+[u S673 . 1 `S665 1 . 1 0 ]
+[v _UCONbits UCONbits `VES673  1 e 1 @3949 ]
+[s S684 . 1 `uc 1 PPB 1 0 :2:0 
+`uc 1 FSEN 1 0 :1:2 
+`uc 1 UTRDIS 1 0 :1:3 
+`uc 1 UPUEN 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 UOEMON 1 0 :1:6 
+`uc 1 UTEYE 1 0 :1:7 
+]
+"785
+[s S692 . 1 `uc 1 PPB0 1 0 :1:0 
+`uc 1 PPB1 1 0 :1:1 
+]
+[s S695 . 1 `uc 1 UPP0 1 0 :1:0 
+`uc 1 UPP1 1 0 :1:1 
+]
+[u S698 . 1 `S684 1 . 1 0 `S692 1 . 1 0 `S695 1 . 1 0 ]
+[v _UCFGbits UCFGbits `VES698  1 e 1 @3951 ]
+"2451
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+[s S87 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"2481
+[s S96 . 1 `uc 1 INT0 1 0 :1:0 
+`uc 1 INT1 1 0 :1:1 
+`uc 1 INT2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 PGM 1 0 :1:5 
+`uc 1 PGC 1 0 :1:6 
+`uc 1 PGD 1 0 :1:7 
+]
+[s S104 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S107 . 1 `S87 1 . 1 0 `S96 1 . 1 0 `S104 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES107  1 e 1 @3969 ]
+"2561
+[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+"2703
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+[s S1117 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"2734
+[s S1126 . 1 `uc 1 SPP0 1 0 :1:0 
+`uc 1 SPP1 1 0 :1:1 
+`uc 1 SPP2 1 0 :1:2 
+`uc 1 SPP3 1 0 :1:3 
+`uc 1 SPP4 1 0 :1:4 
+`uc 1 SPP5 1 0 :1:5 
+`uc 1 SPP6 1 0 :1:6 
+`uc 1 SPP7 1 0 :1:7 
+]
+[s S1135 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S1138 . 1 `S1117 1 . 1 0 `S1126 1 . 1 0 `S1135 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES1138  1 e 1 @3971 ]
+[s S414 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 RDPU 1 0 :1:7 
+]
+"2866
+[s S421 . 1 `uc 1 CK1SPP 1 0 :1:0 
+`uc 1 CK2SPP 1 0 :1:1 
+`uc 1 OESPP 1 0 :1:2 
+]
+[s S425 . 1 `uc 1 PD2 1 0 :1:0 
+`uc 1 PC2 1 0 :1:1 
+`uc 1 CCP10 1 0 :1:2 
+`uc 1 CCP9E 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 CCP2E 1 0 :1:7 
+]
+[s S432 . 1 `uc 1 RDE 1 0 :1:0 
+`uc 1 WRE 1 0 :1:1 
+`uc 1 CS 1 0 :1:2 
+`uc 1 PC3E 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 PA2E 1 0 :1:7 
+]
+[s S439 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PB2 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RE7 1 0 :1:7 
+]
+[u S444 . 1 `S414 1 . 1 0 `S421 1 . 1 0 `S425 1 . 1 0 `S432 1 . 1 0 `S439 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES444  1 e 1 @3972 ]
+[s S872 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+]
+"2996
+[s S880 . 1 `uc 1 LA0 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+`uc 1 LA2 1 0 :1:2 
+`uc 1 LA3 1 0 :1:3 
+`uc 1 LA4 1 0 :1:4 
+`uc 1 LA5 1 0 :1:5 
+`uc 1 LA6 1 0 :1:6 
+]
+[u S888 . 1 `S872 1 . 1 0 `S880 1 . 1 0 ]
+[v _LATAbits LATAbits `VES888  1 e 1 @3977 ]
+"3071
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+[s S1228 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"3098
+[s S1237 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S1246 . 1 `S1228 1 . 1 0 `S1237 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1246  1 e 1 @3978 ]
+"3183
+[v _LATC LATC `VEuc  1 e 1 @3979 ]
+[s S980 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"3206
+[s S987 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S994 . 1 `S980 1 . 1 0 `S987 1 . 1 0 ]
+[v _LATCbits LATCbits `VES994  1 e 1 @3979 ]
+[s S481 . 1 `uc 1 LATE0 1 0 :1:0 
+`uc 1 LATE1 1 0 :1:1 
+`uc 1 LATE2 1 0 :1:2 
+]
+"3390
+[s S485 . 1 `uc 1 LE0 1 0 :1:0 
+`uc 1 LE1 1 0 :1:1 
+`uc 1 LE2 1 0 :1:2 
+]
+[u S489 . 1 `S481 1 . 1 0 `S485 1 . 1 0 ]
+[v _LATEbits LATEbits `VES489  1 e 1 @3981 ]
+[s S836 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+]
+"3455
+[s S844 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+]
+[u S852 . 1 `S836 1 . 1 0 `S844 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES852  1 e 1 @3986 ]
+"3623
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+[s S506 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"3655
+[u S524 . 1 `S506 1 . 1 0 `S87 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES524  1 e 1 @3987 ]
+"3845
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"3999
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+[s S1165 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"4031
+[u S1183 . 1 `S1165 1 . 1 0 `S1117 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES1183  1 e 1 @3989 ]
+"4221
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+[s S767 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T3SYNC 1 0 :1:2 
+]
+"5484
+[s S770 . 1 `uc 1 TMR3ON 1 0 :1:0 
+`uc 1 TMR3CS 1 0 :1:1 
+`uc 1 nT3SYNC 1 0 :1:2 
+`uc 1 T3CCP1 1 0 :1:3 
+`uc 1 T3CKPS 1 0 :2:4 
+`uc 1 T3CCP2 1 0 :1:6 
+`uc 1 RD16 1 0 :1:7 
+]
+[s S778 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T3SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T3CKPS0 1 0 :1:4 
+`uc 1 T3CKPS1 1 0 :1:5 
+]
+[s S784 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T3NSYNC 1 0 :1:2 
+]
+[s S787 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SOSCEN3 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 RD163 1 0 :1:7 
+]
+[s S792 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 T3RD16 1 0 :1:7 
+]
+[u S795 . 1 `S767 1 . 1 0 `S770 1 . 1 0 `S778 1 . 1 0 `S784 1 . 1 0 `S787 1 . 1 0 `S792 1 . 1 0 ]
+[v _T3CONbits T3CONbits `VES795  1 e 1 @4017 ]
+"5585
+[v _CMCON CMCON `VEuc  1 e 1 @4020 ]
+"6240
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @4026 ]
+"6325
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @4029 ]
+"6508
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"6579
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"6664
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S908 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"6708
+[s S911 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+]
+[s S915 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+]
+[s S922 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S925 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S928 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S931 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S934 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S937 . 1 `S908 1 . 1 0 `S911 1 . 1 0 `S915 1 . 1 0 `S922 1 . 1 0 `S925 1 . 1 0 `S928 1 . 1 0 `S931 1 . 1 0 `S934 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES937  1 e 1 @4034 ]
+"6790
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"6797
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+[s S717 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+]
+"7446
+[s S720 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 TMR1CS 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 T1RUN 1 0 :1:6 
+`uc 1 RD16 1 0 :1:7 
+]
+[s S728 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S734 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SOSCEN 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 T1RD16 1 0 :1:7 
+]
+[u S739 . 1 `S717 1 . 1 0 `S720 1 . 1 0 `S728 1 . 1 0 `S734 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES739  1 e 1 @4045 ]
+[s S133 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"8087
+[s S140 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S144 . 1 `S133 1 . 1 0 `S140 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES144  1 e 1 @4053 ]
+[s S546 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"8530
+[s S549 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S558 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IP 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S563 . 1 `S546 1 . 1 0 `S549 1 . 1 0 `S558 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES563  1 e 1 @4081 ]
+[s S38 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"8612
+[s S47 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S56 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S60 . 1 `S38 1 . 1 0 `S47 1 . 1 0 `S56 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES60  1 e 1 @4082 ]
+"3 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\event_queue.c
+[v _queue queue `[10]uc  1 e 10 0 ]
+"4
+[v _rear rear `c  1 e 1 0 ]
+"5
+[v _front front `c  1 e 1 0 ]
+"53 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\LCD-library.h
+[v _LCD_posX LCD_posX `i  1 e 2 0 ]
+"54
+[v _LCD_posY LCD_posY `i  1 e 2 0 ]
+"55
+[v _LCD_isIncrement LCD_isIncrement `i  1 e 2 0 ]
+"56
+[v _LCD_isShift LCD_isShift `i  1 e 2 0 ]
+"57
+[v _LCD_isDisplayOn LCD_isDisplayOn `i  1 e 2 0 ]
+"58
+[v _LCD_isCursorOn LCD_isCursorOn `i  1 e 2 0 ]
+"59
+[v _LCD_isCursorBlinking LCD_isCursorBlinking `i  1 e 2 0 ]
+"60
+[v _LCD_isCursorMoving LCD_isCursorMoving `i  1 e 2 0 ]
+"62 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\newmain.c
+[v _encoder_a encoder_a `VEuc  1 e 1 0 ]
+"63
+[v _encoder_b encoder_b `VEuc  1 e 1 0 ]
+"64
+[v _encoder_a_prev encoder_a_prev `VEuc  1 e 1 0 ]
+"65
+[v _encoder_changed encoder_changed `VEuc  1 e 1 0 ]
+"66
+[v _encoder_dir encoder_dir `VEuc  1 e 1 0 ]
+"68
+[v _debug_mode debug_mode `uc  1 e 1 0 ]
+"71
+[v _current_state current_state `uc  1 e 1 0 ]
+[s S33 config 16 `[7]uc 1 volume 7 0 `[7]uc 1 balance 7 7 `uc 1 source 1 14 `uc 1 mute 1 15 ]
+"73
+[v _configuration configuration `S33  1 e 16 0 ]
+"23 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\switches.c
+[v _relay_source relay_source `ui  1 e 2 0 ]
+"24
+[v _led led `ui  1 e 2 0 ]
+"10 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\volume.c
+[v _volume_left volume_left `VEuc  1 e 1 0 ]
+"11
+[v _volume_right volume_right `VEuc  1 e 1 0 ]
+"12
+[v _muted_volume_left muted_volume_left `uc  1 e 1 0 ]
+"13
+[v _muted_volume_right muted_volume_right `uc  1 e 1 0 ]
+"14
+[v _is_muted is_muted `uc  1 e 1 0 ]
+"261 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\newmain.c
+[v _main main `(i  1 e 2 0 ]
+{
+"262
+[v main@volstring volstring `[8]uc  1 a 8 12 ]
+"263
+[v main@switch_pressed switch_pressed `uc  1 a 1 20 ]
+"591
+} 0
+"159 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\volume.c
+[v _volumeDB volumeDB `(v  1 e 1 0 ]
+{
+[v volumeDB@volume volume `uc  1 a 1 wreg ]
+"161
+[v volumeDB@gain gain `i  1 a 2 40 ]
+"162
+[v volumeDB@gainDec gainDec `i  1 a 2 38 ]
+"160
+[v volumeDB@modulus modulus `i  1 a 2 36 ]
+"159
+[v volumeDB@volume volume `uc  1 a 1 wreg ]
+[v volumeDB@o o `*.39uc  1 p 2 32 ]
+[v volumeDB@volume volume `uc  1 a 1 42 ]
+"204
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 31 ]
+[v ___awmod@counter counter `uc  1 a 1 30 ]
+"8
+[v ___awmod@dividend dividend `i  1 p 2 26 ]
+[v ___awmod@divisor divisor `i  1 p 2 28 ]
+"35
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 24 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 23 ]
+[v ___awdiv@counter counter `uc  1 a 1 22 ]
+"8
+[v ___awdiv@dividend dividend `i  1 p 2 18 ]
+[v ___awdiv@divisor divisor `i  1 p 2 20 ]
+"42
+} 0
+"211 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\switches.c
+[v _update_switches_and_relays update_switches_and_relays `(v  1 e 1 0 ]
+{
+"233
+[v update_switches_and_relays@i_1104 i `uc  1 a 1 23 ]
+"219
+[v update_switches_and_relays@i i `uc  1 a 1 22 ]
+"247
+} 0
+"107 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\volume.c
+[v _toggle_mute toggle_mute `(v  1 e 1 0 ]
+{
+"124
+} 0
+"60
+[v _set_volume set_volume `(v  1 e 1 0 ]
+{
+[v set_volume@vol_left vol_left `uc  1 a 1 wreg ]
+"85
+[v set_volume@i_650 i `uc  1 a 1 21 ]
+"67
+[v set_volume@i i `uc  1 a 1 20 ]
+"61
+[v set_volume@vbitsel vbitsel `uc  1 a 1 22 ]
+"60
+[v set_volume@vol_left vol_left `uc  1 a 1 wreg ]
+[v set_volume@vol_right vol_right `uc  1 p 1 18 ]
+[v set_volume@vol_left vol_left `uc  1 a 1 19 ]
+"105
+} 0
+"70 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\switches.c
+[v _set_mute_led set_mute_led `(v  1 e 1 0 ]
+{
+"72
+} 0
+"74
+[v _clear_mute_led clear_mute_led `(v  1 e 1 0 ]
+{
+"76
+} 0
+"62
+[v _set_standby_led set_standby_led `(v  1 e 1 0 ]
+{
+"64
+} 0
+"204
+[v _set_led_and_source set_led_and_source `(v  1 e 1 0 ]
+{
+[v set_led_and_source@s s `uc  1 a 1 wreg ]
+[v set_led_and_source@s s `uc  1 a 1 wreg ]
+[v set_led_and_source@s s `uc  1 a 1 21 ]
+"209
+} 0
+"162
+[v _read_switches_synchronous read_switches_synchronous `(uc  1 e 1 0 ]
+{
+"163
+[v read_switches_synchronous@s s `uc  1 a 1 22 ]
+"174
+} 0
+"102
+[v _read_switches read_switches `(uc  1 e 1 0 ]
+{
+"104
+[v read_switches@a2dval a2dval `i  1 a 2 20 ]
+"154
+} 0
+"29 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\volume.c
+[v _init_volume init_volume `(v  1 e 1 0 ]
+{
+"58
+} 0
+"101 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\newmain.c
+[v _init_timer init_timer `(v  1 e 1 0 ]
+{
+"121
+} 0
+"48 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\switches.c
+[v _init_switches init_switches `(v  1 e 1 0 ]
+{
+"60
+} 0
+"27
+[v _init_shiftreg init_shiftreg `(v  1 e 1 0 ]
+{
+"46
+} 0
+"183 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\newmain.c
+[v _init_lcd_chars init_lcd_chars `(v  1 e 1 0 ]
+{
+"259
+} 0
+"82 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\switches.c
+[v _clear_view_led clear_view_led `(v  1 e 1 0 ]
+{
+"84
+} 0
+"90
+[v _clear_store_led clear_store_led `(v  1 e 1 0 ]
+{
+"92
+} 0
+"66
+[v _clear_standby_led clear_standby_led `(v  1 e 1 0 ]
+{
+"68
+} 0
+"186
+[v _clear_all_switch_leds clear_all_switch_leds `(v  1 e 1 0 ]
+{
+"188
+} 0
+"200
+[v _clear_all_sources clear_all_sources `(v  1 e 1 0 ]
+{
+"202
+} 0
+"298 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\LCD-library.c
+[v _backlight_on backlight_on `(v  1 e 1 0 ]
+{
+"300
+} 0
+"302
+[v _backlight_off backlight_off `(v  1 e 1 0 ]
+{
+"304
+} 0
+"123 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\newmain.c
+[v _Wait Wait `(v  1 e 1 0 ]
+{
+[v Wait@delay delay `ui  1 p 2 18 ]
+"127
+} 0
+"306 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\LCD-library.c
+[v _LCD_slider LCD_slider `(v  1 e 1 0 ]
+{
+[v LCD_slider@pos pos `uc  1 a 1 wreg ]
+"307
+[v LCD_slider@i i `uc  1 a 1 44 ]
+"306
+[v LCD_slider@pos pos `uc  1 a 1 wreg ]
+"309
+[v LCD_slider@pos pos `uc  1 a 1 43 ]
+"322
+} 0
+"216
+[v _LCD_on LCD_on `(v  1 e 1 0 ]
+{
+"221
+} 0
+"208
+[v _LCD_off LCD_off `(v  1 e 1 0 ]
+{
+"213
+} 0
+"85
+[v _LCD_init LCD_init `(v  1 e 1 0 ]
+{
+"90
+[v LCD_init@LCD_f LCD_f `i  1 a 2 48 ]
+[v LCD_init@LCD_n LCD_n `i  1 a 2 46 ]
+[v LCD_init@LCD_dl LCD_dl `i  1 a 2 44 ]
+"136
+} 0
+"8
+[v _LCD_delay_ms LCD_delay_ms `(v  1 e 1 0 ]
+{
+[v LCD_delay_ms@i i `i  1 a 2 21 ]
+[v LCD_delay_ms@ms ms `i  1 p 2 18 ]
+} 0
+"237
+[v _LCD_home LCD_home `(v  1 e 1 0 ]
+{
+"240
+} 0
+"151
+[v _LCD_displayString LCD_displayString `(v  1 e 1 0 ]
+{
+"156
+[v LCD_displayString@i i `i  1 a 2 4 ]
+"154
+[v LCD_displayString@initialY initialY `i  1 a 2 2 ]
+"153
+[v LCD_displayString@initialX initialX `i  1 a 2 0 ]
+"151
+[v LCD_displayString@str str `*.35Cuc  1 p 2 43 ]
+"166
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"6
+[v strlen@cp cp `*.35Cuc  1 a 2 22 ]
+"4
+[v strlen@s s `*.35Cuc  1 p 2 18 ]
+"13
+} 0
+"139 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\LCD-library.c
+[v _LCD_displayChar LCD_displayChar `(v  1 e 1 0 ]
+{
+[v LCD_displayChar@inputChar inputChar `uc  1 a 1 wreg ]
+[v LCD_displayChar@inputChar inputChar `uc  1 a 1 wreg ]
+[v LCD_displayChar@inputChar inputChar `uc  1 a 1 42 ]
+"148
+} 0
+"277
+[v _LCD_moveRight LCD_moveRight `(v  1 e 1 0 ]
+{
+[v LCD_moveRight@howMuch howMuch `i  1 p 2 38 ]
+"282
+} 0
+"270
+[v _LCD_moveLeft LCD_moveLeft `(v  1 e 1 0 ]
+{
+[v LCD_moveLeft@howMuch howMuch `i  1 p 2 38 ]
+"275
+} 0
+"223
+[v _LCD_setCursor LCD_setCursor `(v  1 e 1 0 ]
+{
+[v LCD_setCursor@pos pos `i  1 p 2 32 ]
+[v LCD_setCursor@row row `i  1 p 2 34 ]
+"235
+} 0
+"242
+[v _LCD_cursorOff LCD_cursorOff `(v  1 e 1 0 ]
+{
+"247
+} 0
+"201
+[v _LCD_clear LCD_clear `(v  1 e 1 0 ]
+{
+"204
+} 0
+"77
+[v _LCD_code LCD_code `(v  1 e 1 0 ]
+{
+[v LCD_code@code code `i  1 p 2 25 ]
+"83
+} 0
+"59
+[v _LCD_8bitCode LCD_8bitCode `(v  1 e 1 0 ]
+{
+[v LCD_8bitCode@code code `i  1 p 2 23 ]
+"62
+} 0
+"52
+[v _LCD_8bitCodeNoWait LCD_8bitCodeNoWait `(v  1 e 1 0 ]
+{
+[v LCD_8bitCodeNoWait@code code `i  1 p 2 18 ]
+"58
+} 0
+"72
+[v _LCD_4bitCode LCD_4bitCode `(v  1 e 1 0 ]
+{
+[v LCD_4bitCode@code code `i  1 p 2 23 ]
+"75
+} 0
+"11
+[v _LCD_wait LCD_wait `(v  1 e 1 0 ]
+{
+"50
+} 0
+"7
+[v _LCD_delay_us LCD_delay_us `(v  1 e 1 0 ]
+{
+[v LCD_delay_us@i i `i  1 a 2 21 ]
+[v LCD_delay_us@us us `i  1 p 2 18 ]
+} 0
+"6
+[v _LCD_delay LCD_delay `(v  1 e 1 0 ]
+{
+[v LCD_delay@i i `i  1 a 2 21 ]
+[v LCD_delay@time time `i  1 p 2 18 ]
+} 0
+"64
+[v _LCD_4bitCodeNoWait LCD_4bitCodeNoWait `(v  1 e 1 0 ]
+{
+[v LCD_4bitCodeNoWait@code code `i  1 p 2 18 ]
+"71
+} 0
+"76 C:\Users\phil.BLINDLIME\MPLABXProjects\preamp.X\newmain.c
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"99
+} 0

@@ -263,7 +263,8 @@ int main(int argc, char ** argv) {
     char switch_pressed = 0;    
 
     encoder_changed = 0;
-    volume = 0;
+    volume_left = 0;
+    volume_right = 0;
     
     // Init port B
     PORTB = 0x00;
@@ -349,8 +350,9 @@ int main(int argc, char ** argv) {
                clear_all_switch_leds();
                clear_all_sources();
                update_switches_and_relays();
-               volume = 0;
-               set_volume(volume);
+               volume_left = 0;
+               volume_right = 0;
+               set_volume(volume_left,volume_right);
                current_state = S_STANDBY_2;
                break;
            case S_STANDBY_2:
@@ -366,9 +368,12 @@ int main(int argc, char ** argv) {
                //startup_sequence();
                set_led_and_source(DEFAULT_SOURCE);
                update_switches_and_relays();
-               volume = DEFAULT_VOLUME;
-               set_volume(volume);
-               volumeDB(volstring);
+               volume_left = DEFAULT_VOLUME;
+               volume_right = DEFAULT_VOLUME;
+               set_volume(volume_left,volume_right);
+               
+               // FIXME: Volume is being calculated from just the left channel
+               volumeDB(volume_left,volstring);
                LCD_setCursor(10,2);
                LCD_displayString(volstring);
                current_state = S_IDLE;
@@ -433,7 +438,9 @@ int main(int argc, char ** argv) {
                        break;
                    case SWITCH_MUTE:
                        toggle_mute();
-                       volumeDB(volstring);
+                       
+                       // FIXME: Volume is being calculated from left chan only
+                       volumeDB(volume_left,volstring);
                        LCD_setCursor(10,2);
                        LCD_displayString(volstring);
                        break;
@@ -447,19 +454,20 @@ int main(int argc, char ** argv) {
 
                if (encoder_changed) {
                    if (encoder_dir == ENCODER_UP) {
-                       if (volume < 255) {
-                           volume++;
+                       if (volume_left < 255) {
+                           volume_left++;
                            configuration.volume[configuration.source]++;
                        }
                    } else {
-                       if (volume > 0) {
-                           volume--;
+                       if (volume_left > 0) {
+                           volume_left--;
                            configuration.volume[configuration.source]--;
                        }
                    }
-                   set_volume(configuration.volume[configuration.source]);
+                   set_volume(volume_left,volume_right);
                    encoder_changed = 0;
-                   volumeDB(volstring);
+                   // FIXME: Volume is being calculated from left chan only
+                   volumeDB(volume_left,volstring);
                    LCD_setCursor(10,2);
                    LCD_displayString(volstring);
                }
@@ -468,15 +476,15 @@ int main(int argc, char ** argv) {
            case S_MENU_1:   
                LCD_setCursor(1,1);
                LCD_displayString(STRING_BALANCE);
-               LCD_slider(bal);
+               LCD_slider(configuration.balance[configuration.source]);
                if (encoder_changed) {
                    if (encoder_dir == ENCODER_UP) {
-                       if (bal < 13) {
-                           bal++;
+                       if (configuration.balance[configuration.source] < 13) {
+                           configuration.balance[configuration.source]++;
                        }
                    } else {
-                       if (bal > 0) {
-                           bal--;
+                       if (configuration.balance[configuration.source] > 0) {
+                           configuration.balance[configuration.source]--;
                        }
                    }
                    encoder_changed = 0;

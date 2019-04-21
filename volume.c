@@ -7,8 +7,10 @@
 #include <stdio.h>
 #include "switches.h"
 
-volatile char volume;
-char muted_volume;
+volatile char volume_left;
+volatile char volume_right;
+char muted_volume_left;
+char muted_volume_right;
 char is_muted = 0;
 
 /* Connections */
@@ -55,19 +57,19 @@ void init_volume(void) {
     INTCONbits.RBIE = 1;  // Set the port change interrupt enable bit
 }
 
-void set_volume(unsigned char vol) {
+void set_volume(unsigned char vol_left, unsigned char vol_right) {
     unsigned char vbitsel = 0x80;
 
    // Bring chip select low
    LATEbits.LE2 = 0;
 
    // Output the volume
-   for (char i = 0; i< 16; i++) {
+   for (char i = 0; i< 8; i++) {
        // Clear the clock
        LATEbits.LE0 = 0;
 
        // Set the data line
-       if (vol & vbitsel) {
+       if (vol_left & vbitsel) {
            LATEbits.LE1 = 1;
        } else {
            LATEbits.LE1 = 0;
@@ -77,10 +79,25 @@ void set_volume(unsigned char vol) {
        LATEbits.LE0 = 1;
 
        // Shift the bit in bitselect one to the right
-       vbitsel = vbitsel >> 1;
-       if (vbitsel == 0) {
-           vbitsel = 0x80;
+       vbitsel = vbitsel >> 1;   
+   }
+   vbitsel = 0x80;
+   for (char i = 0; i< 8; i++) {
+       // Clear the clock
+       LATEbits.LE0 = 0;
+
+       // Set the data line
+       if (vol_right & vbitsel) {
+           LATEbits.LE1 = 1;
+       } else {
+           LATEbits.LE1 = 0;
        }
+
+       // Clock the data in
+       LATEbits.LE0 = 1;
+
+       // Shift the bit in bitselect one to the right
+       vbitsel = vbitsel >> 1;
    }
 
    // Raise the chipselect to latch the data
@@ -89,21 +106,57 @@ void set_volume(unsigned char vol) {
 
 void toggle_mute() {
     if (is_muted) {
-        volume = muted_volume;
-        set_volume(volume);
+        volume_left = muted_volume_left;
+        volume_right = muted_volume_right;
+        set_volume(volume_left,volume_right);
         clear_mute_led();
         is_muted = 0;
     } else {
-        muted_volume = volume;
-        volume = 0;
-        set_volume(0);
+        muted_volume_left = volume_left;
+        muted_volume_right = volume_right;
+        volume_left = 0;
+        volume_right = 0;
+        set_volume(0,0);
         set_mute_led();
         is_muted = 1;
 
     }
 }
 
-void volumeDB(char *o) {
+// Calculate the final output volumes given the
+// base volume and the L/R balance
+
+// FIXME: Signed / Unsigned
+void calculate_output_volumes(unsigned char vol,
+                              unsigned char bal,
+                              unsigned char *left,
+                              unsigned char *right) {
+    char l,r;
+
+    if ((vol-bal)>250) {
+        l = 255;
+    } else {
+        l = vol+6-bal;
+    }
+    
+    if ((vol-6) > 255-bal) {
+        r = 255; 
+    } else {
+        r = vol+bal-6;
+    }
+
+    if (l<0)
+        l = 0;
+    if (r<0)
+        r = 0;
+
+    *left = l;
+    *right = r;
+
+
+}
+
+void volumeDB(unsigned char volume, char *o) {
     int modulus = 0;
     int gain = 0;
     int gainDec = 0;

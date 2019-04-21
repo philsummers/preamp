@@ -8,11 +8,16 @@
 #ifndef VOLUME_H
 #define	VOLUME_H
 
-extern volatile char volume;
+extern volatile char volume_left;
+extern volatile char volume_right;
 
 void init_volume(void);
-void set_volume(unsigned char vol);
-void volumeDB(char *o);
+void set_volume(unsigned char vol_left, unsigned char vol_right);
+void calculate_output_volumes(unsigned char vol,
+                              unsigned char bal,
+                              unsigned char *left,
+                              unsigned char *right);
+void volumeDB(unsigned char volume, char *o);
 void toggle_mute();
 
 #endif	/* VOLUME_H */
